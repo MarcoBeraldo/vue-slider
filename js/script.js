@@ -45,5 +45,8 @@ const root = new Vue({
     },
 
     methods: {
+        setActive(index) {
+            this.activeIndex = index;
+        },
     }
 })
