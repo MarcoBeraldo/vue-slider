@@ -27,7 +27,7 @@
 <body>
     <section id="carousel">
 
-        <i class="fa-solid fa-circle-arrow-left fa-2x" id="prev"></i>
+        <i class="fa-solid fa-circle-arrow-left fa-2x" id="prev" @click="activeIndex--"></i>
 
         <div id="gallery">
             <figure v-for="(img, i) in images" :class="activeIndex === i ? 'item active' : 'item'">
@@ -40,7 +40,8 @@
             </figure>
         </div>
 
-        <i class="fa-solid fa-circle-arrow-right fa-2x" id="next"></i>
+        <i class="fa-solid fa-circle-arrow-right fa-2x" id="next"
+            @click="isLast ? activeIndex = 0 :  activeIndex++"></i>
 
         <div id="thumbnail">
             <img :src=img.url v-for="(img, i) in images" :class="activeIndex === i ? 'thumb active' : 'thumb'">

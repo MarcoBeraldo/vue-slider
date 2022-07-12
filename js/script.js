@@ -36,5 +36,12 @@ const root = new Vue({
         activeIndex: 0,
     },
     computed: {},
-    methods: {}
+    isFirst() {
+        return this.activeIndex === 0
+    },
+    isLast() {
+        return this.activeIndex > this.images.length - 1
+    },
+    methods: {
+    }
 })
